@@ -16,7 +16,7 @@ export interface AuthResponseData {
   registered?: boolean;
 }
 
-@Injectable({ providedIn: 'root' })
+//@Injectable({ providedIn: 'root' })
 export class AuthService {
   user = new BehaviorSubject<User>(new User('','','',new Date()));
 

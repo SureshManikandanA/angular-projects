@@ -4,7 +4,7 @@ import { Observable, map } from "rxjs";
 import { AuthService } from "./auth.service";
 
 
-@Injectable({providedIn: 'root'})
+//@Injectable({providedIn: 'root'})
 export class AuthGurad implements CanActivate{
 autheService = inject(AuthService);
 
@@ -12,9 +12,11 @@ autheService = inject(AuthService);
         state: RouterStateSnapshot
     ): boolean | Observable<boolean> {
         
-        return this.autheService.user.pipe(map( user => {
-            return !!user;
-        }))
+       // return this.autheService.user.pipe(map( user => {
+            //return !!user;
+       // }))
+
+       return true;
        
     }
 

@@ -12,7 +12,7 @@ import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { MainComponent, resolveUserName } from "./main/main/main.component";
 
 import { routes as mainRoutes} from "./main/main.routes";
-import { AuthGurad } from "./auth/auth.guard";
+//import { AuthGurad } from "./auth/auth.guard";
 
 const dummyCanMatch: CanMatchFn = (route, segments) => {
     const router = inject(Router);
@@ -41,7 +41,7 @@ export const routes: Routes = [
     {
         path: 'home', //<your-domain>/main/
         component: MainComponent,
-        canActivate: [AuthGurad],
+       // canActivate: [AuthGurad],
         title: 'Home Page',
         children: mainRoutes,
        // canMatch: [dummyCanMatch],
